@@ -1,4 +1,4 @@
 BillingSoftware
 ===============
 
-Billing Software
+A software that handles billing for a Transport Company.
