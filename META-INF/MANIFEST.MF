@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: BillingSoftware
+Bundle-SymbolicName: BillingSoftware; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.karthik.BillingSoftware.Load.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.forms;bundle-version="3.5.200",
+ org.eclipse.core.resources;bundle-version="3.8.1"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: org.eclipse.core.resources,
+ org.eclipse.ui.forms,
+ org.eclipse.ui.forms.widgets
+Bundle-ClassPath: lib/classes12.jar,
+ lib/jxl-2.6.jar,
+ lib/sqlite-jdbc-3.7.2.jar,
+ .,
+ lib/net.sf.paperclips_1.0.4.200908120926.jar,
+ lib/net.sf.paperclips.ui_1.0.4.200908120926.jar

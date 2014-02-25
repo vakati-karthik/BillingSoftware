@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.karthik.BillingSoftware.Load.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.karthik.BillingSoftware.Load.Perspective"
+            fixed="true"
+            id="BillingSoftware.perspective"
+            name="Perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="Operations"
+            class="com.karthik.BillingSoftware.Load.View"
+            id="com.karthik.BillingSoftware.OperationsView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="*">
+         <view
+               standalone="true"
+               minimized="false"
+               relative="org.eclipse.ui.editorss"
+               relationship="left"
+               id="com.karthik.BillingSoftware.OperationsView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               label="File">
+            <command
+                  commandId="org.eclipse.ui.file.exit"
+                  label="Exit">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.karthik.BillingSoftware.Operations.OperationEditor"
+            default="false"
+            icon="icons/alt_window_32.gif"
+            id="com.karthik.BillingSoftware.OperationsEditor"
+            name="Operation Editor">
+      </editor>
+   </extension>
+
+</plugin>
